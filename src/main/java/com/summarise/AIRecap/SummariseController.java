@@ -7,7 +7,10 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/summarise")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = {
+        "http://localhost:5173",
+        "https://incognito-campus-frontend.vercel.app"
+})
 @AllArgsConstructor
 public class SummariseController {
 
