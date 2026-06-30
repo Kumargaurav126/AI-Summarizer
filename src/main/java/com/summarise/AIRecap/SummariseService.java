@@ -45,8 +45,6 @@ public class SummariseService {
         } catch (HttpClientErrorException.TooManyRequests e) {
             return "AI summary is temporarily unavailable due to rate limits. Please try again later.";
         } catch (HttpClientErrorException e) {
-            System.out.println("Error status: " + e.getStatusCode());
-            System.out.println("Error body: " + e.getResponseBodyAsString());
             return "AI service error: " + e.getStatusCode() + ". Please try again later.";
         } catch (Exception e) {
             return "Failed to generate summary: " + e.getMessage();
